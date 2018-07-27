@@ -1,0 +1,39 @@
+spring:
+    thymeleaf:
+        prefix: classpath:/html/
+    datasource:
+        driver: com.mysql.jdbc.Driver
+        username: ezsupport
+        password: EZ1234
+        url: jdbc:mysql://172.16.140.225:3306/ezsupport
+        acquireIncrement: 10
+        minPoolSize: 10
+        maxPoolSize: 50
+        initialPoolSize: 10
+        type: com.mchange.v2.c3p0.ComboPooledDataSource
+
+server:
+    port: 8011
+
+logging:
+    config: config/logback-spring.xml
+
+
+table:
+   xmgl:
+     tn_aftersale: 项目状态汇总
+     queryList: OA项目名称,负责人,项目状态
+     afterSaleColumnList: OA项目名称,负责人,DEM,项目状态,销售,维保版本,版本,节点,维护期天数,维护开始日期,维护结束日期
+     tn_ywsupport: 易维状态汇总
+     ywcolumnList: 项目名称,维保版本,tdh版本,项目环境,项目状态,客户姓名,客户联系方式,会话级别,问题描述,过程简述,处理人,处理结果,工单创建时间,客服响应时间,工单关闭时间
+     tn_ltsupport: 论坛状态汇总
+     ltcolumnList: 标题,发帖人,问题描述,处理人,处理结果,发帖时间,首次回帖时间,最后回帖时间
+     tn_yxsupport: 邮箱状态汇总
+     yxcolumnList: 邮件主题,发件人,问题描述,处理人,处理结果,发件时间,首次回件时间,最后回件时间
+     tn_nbsupport: 内部状态汇总
+     nbcolumnList: tdh版本,姓名,项目环境,问题描述,过程简述,处理人,处理结果,接入时间,结束时间
+     
+
+    
+
+    
